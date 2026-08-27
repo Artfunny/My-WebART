@@ -1,5 +1,5 @@
 {
   "title": "My WebArt — PNG to WEBP · Kit builder",
-  "type": "website",
-  "card": "custom"
+  "description": "Drop PNG art, convert to WebP, pick a kit, download a zip.",
+  "type": "website"
 }

@@ -23,3 +23,9 @@ See the in-app **How to use** page in the menu.
 - One lightweight example asset is shipped per category so the app stays quick to load.
 - Video and docs keep their original formats.
 - Branding is generic for public sharing on X.
+- Sign-in is off. Libraries live in this browser only.
+
+## Share / test
+
+- Source: https://github.com/Artfunny/My-WebART
+- Live app: open this project in Grok and use the preview pane, or tap **Publish** to get a public `*.grok.me` link you can post on X.
