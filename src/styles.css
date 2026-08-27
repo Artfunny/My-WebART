@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --color-bg: #0c0b0a;
+  --color-surface: #151412;
+  --color-raised: #1c1a17;
+  --color-inset: #100f0e;
+  --color-fg: #f2eee6;
+  --color-muted: #9a9388;
+  --color-subtle: #6e685f;
+  --color-border: #2c2924;
+  --color-accent: #ece6db;
+  --color-accent-fg: #0c0b0a;
+  --color-ring: #ece6db;
+  --color-danger: #c45c4a;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --shadow-border: 0 0 0 1px rgb(242 238 230 / 0.08);
+  --shadow-border-hover: 0 0 0 1px rgb(242 238 230 / 0.16);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  html, body, #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
