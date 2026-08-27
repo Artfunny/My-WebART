@@ -19,31 +19,77 @@
   --color-ring: #ece6db;
   --color-danger: #c45c4a;
 
+  --radius-xs: 0.25rem;
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
 
   --shadow-border: 0 0 0 1px rgb(242 238 230 / 0.08);
   --shadow-border-hover: 0 0 0 1px rgb(242 238 230 / 0.16);
+
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
   html {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  html, body, #app {
+
+  html,
+  body,
+  #app {
     min-height: 100%;
     background: var(--color-bg);
     color: var(--color-fg);
   }
+
   body {
     font-family: var(--font-sans);
     line-height: 1.5;
   }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-fg);
+  }
+}
+
+@utility bg-check {
+  background-color: var(--color-raised);
+  background-image:
+    linear-gradient(45deg, var(--color-surface) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-surface) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-surface) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-surface) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
